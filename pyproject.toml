@@ -2,7 +2,7 @@
 authors = [{ name = "Kelvin Ng", email = "hoishing@gmail.com" }]
 license = { text = "MIT" }
 name = "handy-uti"
-version = "0.3.0"
+version = "0.4.0"
 description = "Handy Utilities For Daily Life Hacks"
 readme = "README.md"
 requires-python = ">=3.12"

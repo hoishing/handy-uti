@@ -4,18 +4,21 @@
 
 ## Usage
 
-### Run Directly with `uvx`
+- Run Directly with `uvx`
 
 ```bash
-uvx k-utils
+uvx handy-uti
+
+# update with latest version
+uvx handy-uti@latest
 ```
 
-### Install Locally
+- Install Locally
 
 ```bash
 uv tool install handy-uti
 
-# start the streamlit app
+# then start the streamlit app
 handy-uti
 ```
 

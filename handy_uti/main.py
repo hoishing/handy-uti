@@ -33,6 +33,7 @@ page_names = [
     "apn_tester",
     "rm_drm",
     "groq_models",
+    "pypi_name_checker",
     "astrobro_updater",
 ]
 
