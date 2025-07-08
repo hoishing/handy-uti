@@ -1,10 +1,10 @@
 # %% =================================================
 import streamlit as st
 from io import BytesIO
-from k_utils.deDRM.adobekey import extract_adobe_key
-from k_utils.deDRM.ineptepub import decryptBook as decrypt_epub
-from k_utils.deDRM.ineptpdf import decryptBook as decrypt_pdf
-from k_utils.ui import app_header, divider, main_container
+from handy_uti.deDRM.adobekey import extract_adobe_key
+from handy_uti.deDRM.ineptepub import decryptBook as decrypt_epub
+from handy_uti.deDRM.ineptpdf import decryptBook as decrypt_pdf
+from handy_uti.ui import app_header, divider, main_container
 from streamlit.runtime.uploaded_file_manager import UploadedFile
 
 icon = ":material/key:"

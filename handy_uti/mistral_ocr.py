@@ -5,7 +5,7 @@ from io import BytesIO
 from mistralai import Mistral, OCRResponse
 from pathlib import Path
 from streamlit.elements.widgets.file_uploader import UploadedFile
-from k_utils.ui import api_key_input, app_header, divider, main_container
+from handy_uti.ui import api_key_input, app_header, divider, main_container
 from zipfile import ZIP_DEFLATED, ZipFile
 
 model = "mistral-ocr-latest"

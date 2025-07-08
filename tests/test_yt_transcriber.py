@@ -8,7 +8,7 @@ url_without_caption = "https://youtube.com/shorts/NbY29sW7gbU"
 
 @fixture(scope="module")
 def yt():
-    return AppTest.from_file("k_utils/main.py", default_timeout=100).run()
+    return AppTest.from_file("handy_uti/main.py", default_timeout=100).run()
 
 
 def test_with_api_key(yt: AppTest):

@@ -9,7 +9,7 @@ from .utils import (
     upload_gemini_audio,
     youtube_obj,
 )
-from k_utils.ui import api_key_input, app_header, divider, main_container
+from handy_uti.ui import api_key_input, app_header, divider, main_container
 
 icon = ":material/youtube_activity:"
 title = "Youtube Transcriber"

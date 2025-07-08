@@ -15,7 +15,7 @@ from ebooklib.epub import (
 )
 from pathlib import Path
 from streamlit.runtime.uploaded_file_manager import UploadedFile
-from k_utils.ui import app_header, divider, main_container
+from handy_uti.ui import app_header, divider, main_container
 from zipfile import ZipFile
 
 icon = ":material/markdown:"

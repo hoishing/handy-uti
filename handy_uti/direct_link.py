@@ -1,6 +1,6 @@
 # %%
 import streamlit as st
-from k_utils.ui import app_header, divider, main_container
+from handy_uti.ui import app_header, divider, main_container
 
 icon = ":material/link:"
 title = "Direct Link"

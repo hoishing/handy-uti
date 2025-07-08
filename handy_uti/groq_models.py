@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 from groq import Groq
 from pandas import DataFrame
-from k_utils.ui import api_key_input, app_header, main_container
+from handy_uti.ui import api_key_input, app_header, main_container
 
 icon = ":material/lightbulb:"
 title = "Groq Models"

@@ -2,8 +2,8 @@
 authors = [{ name = "Kelvin Ng", email = "hoishing@gmail.com" }]
 license = { text = "MIT" }
 name = "handy-uti"
-version = "0.1.0"
-description = "Handy Utilities For Daily Hacking"
+version = "0.2.0"
+description = "Handy Utilities For Daily Life Hacks"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -35,13 +35,13 @@ isort.no-sections = true
 extend-ignore = ["E203", "E402", "E501", "E712", "F401", "F811"]
 
 [tool.hatch.build.targets.wheel]
-packages = ["k_utils"]
+packages = ["handy_uti"]
 
 [project.scripts]
-k-utils = "k_utils.launcher:main"
+handy-uti = "handy_uti.launcher:main"
 
 [project.urls]
-repository = "https://github.com/hoishing/k-utils"
+repository = "https://github.com/hoishing/handy-uti"
 
 [build-system]
 requires = ["hatchling"]

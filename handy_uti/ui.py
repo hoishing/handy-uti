@@ -1,5 +1,5 @@
 import streamlit as st
-from k_utils.utils import get_api_key
+from handy_uti.utils import get_api_key
 from typing import Callable, Literal, get_args
 
 LLM = Literal["gemini", "groq", "mistral"]

@@ -2,7 +2,7 @@ import json
 import streamlit as st
 from io import BytesIO
 from streamlit.runtime.uploaded_file_manager import UploadedFile
-from k_utils.ui import app_header, main_container
+from handy_uti.ui import app_header, main_container
 from zipfile import ZIP_DEFLATED, ZipFile
 
 icon = ":material/planet:"

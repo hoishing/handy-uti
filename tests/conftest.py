@@ -26,7 +26,7 @@ def wait_starting(process: Popen, timeout: int = 30):
 
 def st_server_process(filename: str, port: int = 9507):
     cmd = (
-        f"streamlit run k_utils/{filename} --server.port {port} --server.headless true"
+        f"streamlit run handy_uti/{filename} --server.port {port} --server.headless true"
     )
     process = Popen(cmd.split())
     wait_starting(process)

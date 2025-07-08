@@ -1,7 +1,7 @@
 # %% =================================================
 import importlib
 import streamlit as st
-from k_utils.utils import url_path
+from handy_uti.utils import url_path
 from pathlib import Path
 
 # %% ================================================= config
@@ -39,7 +39,7 @@ page_names = [
 pages = []
 
 for page_name in page_names:
-    module = importlib.import_module(f"k_utils.{page_name}")
+    module = importlib.import_module(f"handy_uti.{page_name}")
     pages.append(
         st.Page(
             page=module.app,

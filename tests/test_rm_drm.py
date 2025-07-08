@@ -1,4 +1,4 @@
-from deDRM import extract_adobe_key
+from handy_uti.deDRM import extract_adobe_key
 from pathlib import Path
 
 

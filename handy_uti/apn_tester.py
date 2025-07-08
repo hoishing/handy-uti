@@ -5,7 +5,7 @@ import time
 from enum import StrEnum
 from httpx import Client, Response
 from io import StringIO
-from k_utils.ui import app_header, divider, main_container
+from handy_uti.ui import app_header, divider, main_container
 
 title = "APNs Tester"
 icon = ":material/mark_chat_unread:"
