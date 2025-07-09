@@ -2,7 +2,7 @@
 authors = [{ name = "Kelvin Ng", email = "hoishing@gmail.com" }]
 license = { text = "MIT" }
 name = "handy-uti"
-version = "0.4.0"
+version = "0.5.0"
 description = "Handy Utilities For Daily Life Hacks"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -22,6 +22,7 @@ dependencies = [
     "python-dotenv>=1.1.1",
     "watchdog>=6.0.0",
     "click>=8.2.1",
+    "transformers>=4.53.1",
 ]
 
 [dependency-groups]

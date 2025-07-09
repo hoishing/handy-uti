@@ -36,6 +36,7 @@ uvx handy-uti path/to/your/.env
 GEMINI_API_KEY=your-gemini-api-key
 GROQ_API_KEY=your-groq-api-key
 MISTRAL_API_KEY=your-mistral-api-key
+HUGGINGFACE_API_KEY=your-huggingface-api-key
 ```
 
 ## Questions?

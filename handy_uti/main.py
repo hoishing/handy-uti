@@ -27,6 +27,7 @@ st.html(root_dir / "style.css")
 
 page_names = [
     "yt_transcriber",
+    "token_counter",
     "mistral_ocr",
     "md2epub",
     "direct_link",
