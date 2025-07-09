@@ -12,17 +12,17 @@ def yt():
 
 
 def test_with_api_key(yt: AppTest):
-    assert yt.text_input(key="gemini-api-key").value is not None
+    assert yt.text_input(key="google-api-key").value is not None
     assert not yt.text_input(key="url-input").disabled
 
 
 def test_no_api_key(yt: AppTest):
-    yt.text_input(key="gemini-api-key").set_value("").run()
+    yt.text_input(key="google-api-key").set_value("").run()
     assert yt.text_input(key="url-input").disabled
 
 
 def test_transcribe_with_caption(yt: AppTest):
-    yt.text_input(key="gemini-api-key").set_value(os.environ["GEMINI_API_KEY"]).run()
+    yt.text_input(key="google-api-key").set_value(os.environ["GOOGLE_API_KEY"]).run()
     yt.text_input(key="url-input").set_value(url_with_caption).run()
     assert yt.selectbox(key="caption-lang").label == "Select the language"
     yt.selectbox(key="caption-lang").select("en").run()
@@ -34,6 +34,6 @@ def test_transcribe_with_caption(yt: AppTest):
 
 
 def test_transcribe_without_caption(yt: AppTest):
-    yt.text_input(key="gemini-api-key").set_value(os.environ["GEMINI_API_KEY"]).run()
+    yt.text_input(key="google-api-key").set_value(os.environ["GOOGLE_API_KEY"]).run()
     yt.text_input(key="url-input").set_value(url_without_caption).run()
     assert yt.button(key="confirm-transcribe").label == "Confirm Transcribe"

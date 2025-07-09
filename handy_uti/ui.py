@@ -2,7 +2,7 @@ import streamlit as st
 from handy_uti.utils import get_api_key
 from typing import Callable, Literal, get_args
 
-LLM = Literal["gemini", "groq", "mistral", "huggingface"]
+LLM = Literal["google", "groq", "mistral", "huggingface"]
 LLM_SITES = [
     "https://ai.google.dev/gemini-api/docs/api-key",
     "https://console.groq.com/docs/quickstart",

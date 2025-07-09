@@ -19,7 +19,7 @@ def youtube_obj(url: str | None) -> YouTube | None:
 
 
 def add_punctuation(api_key: str, transcript: str) -> str:
-    """Add punctuation to a transcript using Gemini's LLM."""
+    """Add punctuation to a transcript using Google's LLM."""
     sys_prompt = "add punctuation to the following text with proper paragraph, give the output without other comments"
     client = Client(api_key=api_key)
     response = client.models.generate_content(
@@ -60,7 +60,7 @@ def remove_duplicate_gemini_audio(name: str, client: Client):
 def upload_gemini_audio(
     name: str, buffer: Buffer, mime_type: str, client: Client
 ) -> types.File:
-    """upload the audio to Gemini cloud storage"""
+    """upload the audio to Google cloud storage"""
     io_obj: BytesIO = buffer.buffer
     io_obj.seek(0)
     upload_config = types.UploadFileConfig(mime_type=mime_type, name=name)

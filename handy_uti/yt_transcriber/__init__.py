@@ -79,7 +79,7 @@ def confirm_transcribe(yt, api_key):
 
 
 def body():
-    api_key = api_key_input("Gemini")
+    api_key = api_key_input("Google")
     url = st.text_input("Youtube URL", key="url-input", disabled=not api_key)
 
     if not api_key or not url:

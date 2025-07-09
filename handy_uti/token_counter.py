@@ -9,7 +9,7 @@ icon = ":material/assignment:"
 title = "Token Counter"
 
 MODELS = {
-    "Gemini": [
+    "Google": [
         "gemini-2.5-flash",
         "gemma-3n-e4b-it",
     ],
@@ -24,7 +24,7 @@ MODELS = {
 
 def counter(provider: str, model: str, api_key: str, content: str) -> int:
     match provider:
-        case "Gemini":
+        case "Google":
             client = genai.Client(api_key=api_key)
             response = client.models.count_tokens(model=model, contents=content)
             return response.total_tokens
@@ -60,7 +60,7 @@ def body():
         - HuggingFace models need to request permission before use.
         - Groq uses opensource models that similar to those in HuggingFace.
         - [AutoTokenizer](https://huggingface.co/docs/transformers/en/main_classes/tokenizer) is used for HuggingFace models.
-        - [CountTokens API](https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/count-tokens) is used for Gemini models.
+        - [CountTokens API](https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/count-tokens) is used for Google models.
         """
     )
     divider()
@@ -75,7 +75,7 @@ def app():
     app_header(
         icon=f":violet[{icon}]",
         title=title,
-        description="Count the number of tokens in a text",
+        description="Count tokens used in a text for different LLM models",
     )
 
     main_container(body)

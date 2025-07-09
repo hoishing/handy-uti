@@ -2,7 +2,7 @@
 authors = [{ name = "Kelvin Ng", email = "hoishing@gmail.com" }]
 license = { text = "MIT" }
 name = "handy-uti"
-version = "0.5.0"
+version = "0.5.1"
 description = "Handy Utilities For Daily Life Hacks"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -14,7 +14,7 @@ dependencies = [
     "groq>=0.24.0",
     "beautifulsoup4>=4.13.4",
     "lxml>=5.4.0",
-    "pypandoc>=1.15",
+    "pypandoc_binary>=1.15",
     "ebooklib>=0.19",
     "pycryptodome==3.21.0",
     "pyjwt>=2.10.1",
