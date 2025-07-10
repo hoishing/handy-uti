@@ -2,8 +2,6 @@
 import streamlit as st
 from handy_uti.ui import app_header, divider, main_container
 
-icon = ":material/link:"
-title = "Direct Link"
 
 
 def body():
@@ -28,11 +26,7 @@ def body():
 
 
 def app():
-    app_header(
-        icon=f":blue[{icon}]",
-        title=title,
-        description="Get direct link of Google Drive or Github file",
-    )
+    app_header(__name__)
     main_container(body)
 
 

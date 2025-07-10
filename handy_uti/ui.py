@@ -11,10 +11,16 @@ LLM_SITES = [
 ]
 
 
-def app_header(icon: str, title: str, description: str):
+def app_header(module_full_name: str):
+    from handy_uti import page_metadata
+    # Extract just the module name from full path like "handy_uti.yt_transcriber"
+    module_name = module_full_name.split('.')[-1]
+    metadata = page_metadata[module_name]
+    icon_with_color = f":{metadata['color']}[:material/{metadata['icon']}:]"
+    
     with st.container(key="app-header"):
-        st.markdown(f"## {icon} &nbsp; {title}")
-        st.caption(description)
+        st.markdown(f"## {icon_with_color} &nbsp; {metadata['title']}")
+        st.caption(metadata['description'])
 
 
 def main_container(body: Callable):

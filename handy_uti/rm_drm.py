@@ -7,8 +7,6 @@ from handy_uti.deDRM.ineptpdf import decryptBook as decrypt_pdf
 from handy_uti.ui import app_header, divider, main_container
 from streamlit.runtime.uploaded_file_manager import UploadedFile
 
-icon = ":material/key:"
-title = "Remove DRM"
 
 
 # %% ================================================= decrypt file
@@ -71,9 +69,5 @@ def body():
 
 
 def app():
-    app_header(
-        icon=f":orange[{icon}]",
-        title=title,
-        description="Remove DRM of Your Own Ebook from Adobe Digital Edition",
-    )
+    app_header(__name__)
     main_container(body)

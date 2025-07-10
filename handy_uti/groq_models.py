@@ -4,8 +4,6 @@ from groq import Groq
 from pandas import DataFrame
 from handy_uti.ui import api_key_input, app_header, main_container
 
-icon = ":material/lightbulb:"
-title = "Groq Models"
 
 
 def model_df(groq_api_key):
@@ -52,11 +50,7 @@ def body():
 
 
 def app():
-    app_header(
-        icon=f":orange[{icon}]",
-        title=title,
-        description="List all currently active and available models in Groq",
-    )
+    app_header(__name__)
 
     main_container(body)
 

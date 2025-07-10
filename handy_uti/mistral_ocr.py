@@ -9,8 +9,6 @@ from handy_uti.ui import api_key_input, app_header, divider, main_container
 from zipfile import ZIP_DEFLATED, ZipFile
 
 model = "mistral-ocr-latest"
-icon = ":material/scanner:"
-title = "Mistral OCR"
 
 
 # %% ================================================= ocr functions
@@ -131,11 +129,7 @@ def body():
 
 
 def app():
-    app_header(
-        icon=f":orange[{icon}]",
-        title=title,
-        description="Turn PDF or Image to Markdown with Mistral AI OCR",
-    )
+    app_header(__name__)
     main_container(body)
 
 

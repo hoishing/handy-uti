@@ -18,8 +18,6 @@ from streamlit.runtime.uploaded_file_manager import UploadedFile
 from handy_uti.ui import app_header, divider, main_container
 from zipfile import ZipFile
 
-icon = ":material/markdown:"
-title = "MD to Epub"
 
 
 # %% ================================================= extract files from zip
@@ -159,11 +157,7 @@ def body():
 
 
 def app():
-    app_header(
-        icon=f":violet[{icon}]",
-        title=title,
-        description="Convert markdown with images to epub",
-    )
+    app_header(__name__)
     main_container(body)
 
 

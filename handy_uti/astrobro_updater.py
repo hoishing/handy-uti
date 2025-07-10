@@ -5,8 +5,6 @@ from streamlit.runtime.uploaded_file_manager import UploadedFile
 from handy_uti.ui import app_header, main_container
 from zipfile import ZIP_DEFLATED, ZipFile
 
-icon = ":material/planet:"
-title = "Astrobro Updater"
 
 
 chinese_locations = {
@@ -92,11 +90,7 @@ def main_body():
 
 
 def app():
-    app_header(
-        icon=f":orange[{icon}]",
-        title=title,
-        description="Update [AstroBro](https://hoishing.github.io/astrobro/) JSON files with city names and country codes",
-    )
+    app_header(__name__)
     main_container(body=main_body)
 
 

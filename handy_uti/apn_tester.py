@@ -7,8 +7,6 @@ from httpx import Client, Response
 from io import StringIO
 from handy_uti.ui import app_header, divider, main_container
 
-title = "APNs Tester"
-icon = ":material/mark_chat_unread:"
 
 
 # %% ================================================= utils
@@ -173,9 +171,5 @@ def body():
 
 
 def app():
-    app_header(
-        icon=f":blue[{icon}]",
-        title=title,
-        description="Test Apple Push Notification With Ease",
-    )
+    app_header(__name__)
     main_container(body)

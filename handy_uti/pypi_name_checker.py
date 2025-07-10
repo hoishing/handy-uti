@@ -3,8 +3,6 @@ import requests
 import streamlit as st
 from handy_uti.ui import app_header, divider, main_container
 
-icon = ":material/check_circle:"
-title = "PyPi Name Checker"
 
 BASE_URL = "https://pypi.org/pypi"
 
@@ -69,10 +67,6 @@ def body():
 
 
 def app():
-    app_header(
-        icon=f":blue[{icon}]",
-        title=title,
-        description="Check the availability of PyPi package names",
-    )
+    app_header(__name__)
 
     main_container(body)

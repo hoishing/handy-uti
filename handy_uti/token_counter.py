@@ -1,12 +1,8 @@
-import os
 import streamlit as st
 from google import genai
 from handy_uti.ui import api_key_input, app_header, divider, main_container
-from pathlib import Path
 from transformers import AutoTokenizer
 
-icon = ":material/assignment:"
-title = "Token Counter"
 
 MODELS = {
     "Google": [
@@ -72,10 +68,6 @@ def body():
 
 
 def app():
-    app_header(
-        icon=f":violet[{icon}]",
-        title=title,
-        description="Count tokens used in a text for different LLM models",
-    )
+    app_header(__name__)
 
     main_container(body)

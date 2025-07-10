@@ -27,14 +27,14 @@ st.html(root_dir / "style.css")
 
 pages = []
 
-for page_name in page_metadata:
+for page_name, metadata in page_metadata.items():
     module = importlib.import_module(f"handy_uti.{page_name}")
     pages.append(
         st.Page(
             page=module.app,
-            title=module.title,
-            icon=module.icon,
-            url_path=url_path(module.title),
+            title=metadata["title"],
+            icon=f":material/{metadata['icon']}:",
+            url_path=url_path(metadata["title"]),
         )
     )
 

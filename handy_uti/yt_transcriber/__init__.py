@@ -11,8 +11,6 @@ from .utils import (
 )
 from handy_uti.ui import api_key_input, app_header, divider, main_container
 
-icon = ":material/youtube_activity:"
-title = "Youtube Transcriber"
 
 
 def caption_ui(yt: YouTube | None, langs: list[str], api_key: str) -> None:
@@ -100,11 +98,7 @@ def body():
 
 
 def app():
-    app_header(
-        icon=f":red[{icon}]",
-        title=title,
-        description="Extract captions if available, transcribe the audio with AI otherwise",
-    )
+    app_header(__name__)
 
     main_container(body)
 
