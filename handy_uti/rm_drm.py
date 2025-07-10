@@ -77,6 +77,3 @@ def app():
         description="Remove DRM of Your Own Ebook from Adobe Digital Edition",
     )
     main_container(body)
-
-
-# %% ================================================= old app

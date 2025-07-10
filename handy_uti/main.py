@@ -1,6 +1,7 @@
 # %% =================================================
 import importlib
 import streamlit as st
+from handy_uti import page_metadata
 from handy_uti.utils import url_path
 from pathlib import Path
 
@@ -24,23 +25,9 @@ st.html(root_dir / "style.css")
 
 # %% ================================================= load pages
 
-
-page_names = [
-    "yt_transcriber",
-    "token_counter",
-    "mistral_ocr",
-    "md2epub",
-    "direct_link",
-    "apn_tester",
-    "rm_drm",
-    "groq_models",
-    "pypi_name_checker",
-    "astrobro_updater",
-]
-
 pages = []
 
-for page_name in page_names:
+for page_name in page_metadata:
     module = importlib.import_module(f"handy_uti.{page_name}")
     pages.append(
         st.Page(
