@@ -3,7 +3,6 @@ import requests
 import streamlit as st
 from handy_uti.ui import app_header, divider, main_container
 
-
 BASE_URL = "https://pypi.org/pypi"
 
 
@@ -51,11 +50,10 @@ def body():
     )
     divider()
     c1, c2 = st.columns([3, 1], vertical_alignment="bottom")
-    c1.text_input("Package Names", key="names", placeholder="name1, name2, name3...")
-    if c2.button("Check", use_container_width=True):
-        # divider(key="divider2")
+    name_input = c1.text_input("Package Names", placeholder="name1, name2, name3...")
+    if c2.button("Check", use_container_width=True) and name_input:
         st.write("")
-        names = st.session_state.names.split(",")
+        names = name_input.split(",")
         for name in names:
             for key, value in check_name(name.strip()).items():
                 badge = (
